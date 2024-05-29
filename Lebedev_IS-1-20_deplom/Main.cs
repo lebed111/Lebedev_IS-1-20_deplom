@@ -36,8 +36,8 @@ namespace Lebedev_IS_1_20_deplom
             table.Rows.Clear();
             table.Columns.Clear();
             bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;          
-            
+            dataGridView1.DataSource = bSource;
+
             switch (a)
             {
                 case 1:
@@ -202,6 +202,74 @@ namespace Lebedev_IS_1_20_deplom
             
         }
 
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+
+            int h = DateTime.Now.Hour;
+            int m = DateTime.Now.Minute;
+            int s = DateTime.Now.Second;
+
+            string time = "";
+            if (h < 10)
+            {
+                time += "0" + h;
+            }
+            else
+            {
+                time += h;
+            }
+
+            time += ":";
+
+            if (m < 10)
+            {
+                time += "0" + m;
+            }
+            else
+            {
+                time += m;
+            }
+
+            time += ":";
+
+            if (s < 10)
+            {
+                time += "0" + s;
+            }
+            else
+            {
+                time += s;
+            }
+
+            string data = "";
+
+            label4.Text = time;
+            int day = DateTime.Now.Day;
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+
+            if (day < 10)
+            {
+                data += "0" + day;
+            }
+            else
+            {
+                data += day;
+            }
+            data += ".";
+            if (month < 10)
+            {
+                data += "0" + month;
+            }
+            else
+            {
+                data += month;
+            }
+            data += ".";
+            data += year;
+            label3.Text = data;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.TopMost = true;           
@@ -210,6 +278,9 @@ namespace Lebedev_IS_1_20_deplom
             label1.Text = Auth.username;
             connectonsql.con();
             BD(1);
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(timer1_Tick) ;
+            timer.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -309,6 +380,60 @@ namespace Lebedev_IS_1_20_deplom
         {
             Statisticemployee statisticemployee = new Statisticemployee();
             statisticemployee.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        //    string searchText = textBox1.Text;
+        //    List<DataGridViewRow> foundRows = new List<DataGridViewRow>();
+        //
+        //    foreach (DataGridViewRow row in dataGridView1.Rows)
+        //    {
+        //        foreach (DataGridViewCell cell in row.Cells)
+        //        {
+        //            if (cell.Value != null && cell.Value.ToString().Contains(searchText))
+        //            {
+        //                foundRows.Add((DataGridViewRow)row.Clone()); // Клонируем строку и добавляем в список
+        //                for (int i = 0; i < row.Cells.Count; i++)
+        //                {
+        //                    foundRows[foundRows.Count - 1].Cells[i].Value = row.Cells[i].Value;
+        //                }
+        //                break;
+        //            }
+        //        }
+        //    }
+        //
+        //    dataGridView1.Rows.Clear();// Очищаем DataGridView
+        //
+        //    foreach (DataGridViewRow row in foundRows)
+        //    {
+        //        dataGridView1.Rows.Add(row); // Добавляем только строки с найденным текстом
+        //    }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+            }
         }
     }
 }
