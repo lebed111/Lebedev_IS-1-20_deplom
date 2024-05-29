@@ -307,7 +307,8 @@ namespace Lebedev_IS_1_20_deplom
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            Statisticemployee statisticemployee = new Statisticemployee();
+            statisticemployee.Show();
         }
     }
 }
