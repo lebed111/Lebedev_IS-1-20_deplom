@@ -192,7 +192,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Name = "Addreception";
-            this.Text = "Addreception";
+            this.Text = "Продажа товара";
             this.Load += new System.EventHandler(this.Addreception_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

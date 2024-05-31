@@ -63,7 +63,7 @@ namespace Lebedev_IS_1_20_deplom
             connectonsql.con();
             this.TopMost = true;
             update();
-
+            chart1.Titles.Add("Май");
         }
 
         private void button1_Click(object sender, EventArgs e)

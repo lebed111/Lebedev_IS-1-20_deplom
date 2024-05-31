@@ -107,7 +107,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Addproduct";
-            this.Text = "Addproduct";
+            this.Text = "Добовление нового товара";
             this.Load += new System.EventHandler(this.Addproduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -92,7 +92,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Addlogin";
-            this.Text = "Addlogin";
+            this.Text = "Логин и пароль";
             this.Load += new System.EventHandler(this.Addlogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

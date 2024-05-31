@@ -281,6 +281,7 @@ namespace Lebedev_IS_1_20_deplom
             timer.Interval = 1000;
             timer.Tick += new EventHandler(timer1_Tick) ;
             timer.Start();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -394,31 +395,6 @@ namespace Lebedev_IS_1_20_deplom
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-        //    string searchText = textBox1.Text;
-        //    List<DataGridViewRow> foundRows = new List<DataGridViewRow>();
-        //
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        foreach (DataGridViewCell cell in row.Cells)
-        //        {
-        //            if (cell.Value != null && cell.Value.ToString().Contains(searchText))
-        //            {
-        //                foundRows.Add((DataGridViewRow)row.Clone()); // Клонируем строку и добавляем в список
-        //                for (int i = 0; i < row.Cells.Count; i++)
-        //                {
-        //                    foundRows[foundRows.Count - 1].Cells[i].Value = row.Cells[i].Value;
-        //                }
-        //                break;
-        //            }
-        //        }
-        //    }
-        //
-        //    dataGridView1.Rows.Clear();// Очищаем DataGridView
-        //
-        //    foreach (DataGridViewRow row in foundRows)
-        //    {
-        //        dataGridView1.Rows.Add(row); // Добавляем только строки с найденным текстом
-        //    }
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -433,6 +409,46 @@ namespace Lebedev_IS_1_20_deplom
                             dataGridView1.Rows[i].Selected = true;
                             break;
                         }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            switch (bdindex)
+            {
+                case 1:
+                    update.Updateemployee updateemployee = new update.Updateemployee();
+                    updateemployee.ShowDialog();
+                    break;
+
+                case 2:
+                    update.Updateproduct updateproduct = new update.Updateproduct();
+                    updateproduct.ShowDialog();
+                    break;
+                case 3:
+                    update.UpdateClient updateClient = new update.UpdateClient();
+                    updateClient.ShowDialog();
+                    break;
+                case 4:
+                    update.Updatewerehous updatewerehous = new update.Updatewerehous();
+                    updatewerehous.ShowDialog();
+                    break;
+                case 5:
+                    update.Update_providera update_Providera = new update.Update_providera();
+                    update_Providera.ShowDialog();
+                    break;
+                case 6:
+                    update.Updaterecepton updaterecepton = new update.Updaterecepton();
+                    updaterecepton.ShowDialog();
+                    break;
+                case 7:
+                    update.Updateentrance updateentrance = new update.Updateentrance();
+                    updateentrance.ShowDialog();
+                    break;
+                case 8:
+                    update.Updatelogin updatelogin = new update.Updatelogin();
+                    updatelogin.ShowDialog();
+                    break;
             }
         }
     }

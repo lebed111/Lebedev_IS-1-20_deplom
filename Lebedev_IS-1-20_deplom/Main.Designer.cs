@@ -317,6 +317,7 @@
             this.button10.TabIndex = 13;
             this.button10.Text = "Изменить запись ";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 

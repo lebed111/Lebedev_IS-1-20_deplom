@@ -179,6 +179,54 @@
     <Compile Include="Statisticsreception.Designer.cs">
       <DependentUpon>Statisticsreception.cs</DependentUpon>
     </Compile>
+    <Compile Include="update\Update providera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Update providera.Designer.cs">
+      <DependentUpon>Update providera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updateemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updateemployee.Designer.cs">
+      <DependentUpon>Updateemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updateentrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updateentrance.Designer.cs">
+      <DependentUpon>Updateentrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updatelogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updatelogin.Designer.cs">
+      <DependentUpon>Updatelogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updateproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updateproduct.Designer.cs">
+      <DependentUpon>Updateproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updaterecepton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updaterecepton.Designer.cs">
+      <DependentUpon>Updaterecepton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update\Updatewerehous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update\Updatewerehous.Designer.cs">
+      <DependentUpon>Updatewerehous.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_\Addclient.resx">
       <DependentUpon>Addclient.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +274,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statisticsreception.resx">
       <DependentUpon>Statisticsreception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Update providera.resx">
+      <DependentUpon>Update providera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updateemployee.resx">
+      <DependentUpon>Updateemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updateentrance.resx">
+      <DependentUpon>Updateentrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updatelogin.resx">
+      <DependentUpon>Updatelogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updateproduct.resx">
+      <DependentUpon>Updateproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updaterecepton.resx">
+      <DependentUpon>Updaterecepton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update\Updatewerehous.resx">
+      <DependentUpon>Updatewerehous.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
