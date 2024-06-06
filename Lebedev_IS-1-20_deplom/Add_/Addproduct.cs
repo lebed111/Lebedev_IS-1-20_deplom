@@ -30,6 +30,7 @@ namespace Lebedev_IS_1_20_deplom.Add_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Добавлена новая строка");
             try
             {
                 connectonsql.conn.Open();

@@ -16,5 +16,15 @@ namespace Lebedev_IS_1_20_deplom.update
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Запись удалена");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Запись изменена");
+        }
     }
 }
