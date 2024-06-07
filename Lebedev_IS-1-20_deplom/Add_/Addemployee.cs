@@ -28,7 +28,7 @@ namespace Lebedev_IS_1_20_deplom.Add
         private void Add_Load(object sender, EventArgs e)
         {
             this.TopMost = true;
-            this.FormClosing += MainForm_Closing;
+            //this.FormClosing += MainForm_Closing;
             connectonsql.con();
             connectonsql.conn.Open();
             string sql8 = "SELECT * From login";
@@ -70,28 +70,6 @@ namespace Lebedev_IS_1_20_deplom.Add
             }
             catch { }
         }
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == (Keys.Alt | Keys.F4))
-            {
-                // Ignore Alt+F4
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-        private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (costel == 0)
-            {
-                //устанавливает флаг отмены события в истину
-                e.Cancel = true;
-                //спрашивает стоит ли завершится
-                if (MessageBox.Show("Вы уверены что хотите закрыть окно?", "Закрыть окно?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    //и после этого только завершается работа приложения
-                    Application.Exit();
-                }
-            }
-        }
+
     }
 }
